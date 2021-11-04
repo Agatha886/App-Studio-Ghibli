@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/detalhes_filmes_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Detalhe Filme" />
+
+        <TextView
+            android:id="@+id/detalhes_filmes_ano"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/detalhes_filmes_titulo"
+            app:layout_constraintTop_toBottomOf="@id/detalhes_filmes_titulo"
+            tools:text="Detalhe Filme" />
+
+        <TextView
+            android:id="@+id/detalhes_filmes_textview_personagens"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detalhes_filmes_titulo"
+            app:layout_constraintTop_toBottomOf="@id/detalhes_filmes_ano"
+            android:text="Personagens:" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/detalhes_filmes_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detalhes_filmes_textview_personagens"
+            app:spanCount="4"
+            tools:listitem="@layout/item_persornagens" />
+
+        <TextView
+            android:id="@+id/detalhes_filme_textview_sinopse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Sinopse:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/detalhes_filmes_titulo"
+            app:layout_constraintStart_toStartOf="@id/detalhes_filmes_ano"
+            app:layout_constraintTop_toBottomOf="@id/detalhes_filmes_recycler" />
+
+        <TextView
+            android:id="@+id/detalhes_filme_sinopse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/detalhes_filmes_titulo"
+            app:layout_constraintStart_toStartOf="@id/detalhes_filmes_ano"
+            app:layout_constraintTop_toBottomOf="@id/detalhes_filme_textview_sinopse"
+            tools:text="Detalhe Filme" />
+
+        <ImageView
+            android:id="@+id/detalhes_filme_imagem"
+            android:layout_width="0dp"
+            android:layout_height="450dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/detalhes_filme_sinopse"
+            app:layout_constraintStart_toStartOf="@id/detalhes_filme_sinopse"
+            app:layout_constraintTop_toBottomOf="@id/detalhes_filme_sinopse" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/detalhes_personagens_nome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nome" />
+
+        <TextView
+            android:id="@+id/detalhes_personagens_textview_idade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="idade:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detalhes_personagens_nome"
+            app:layout_constraintTop_toBottomOf="@id/detalhes_personagens_nome" />
+
+        <TextView
+            android:id="@+id/detalhes_personagens_idade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/detalhes_personagens_textview_idade"
+            app:layout_constraintTop_toTopOf="@id/detalhes_personagens_textview_idade"
+            tools:text="400" />
+
+        <TextView
+            android:id="@+id/detalhes_personagens_textview_genero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Gênero:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detalhes_personagens_nome"
+            app:layout_constraintTop_toBottomOf="@id/detalhes_personagens_idade" />
+
+        <TextView
+            android:id="@+id/detalhes_personagens_genero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/detalhes_personagens_textview_genero"
+            app:layout_constraintTop_toTopOf="@id/detalhes_personagens_textview_genero"
+            tools:text="400" />
+
+        <TextView
+            android:id="@+id/detalhes_personagens_textview_olhos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Cor dos Olhos:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detalhes_personagens_nome"
+            app:layout_constraintTop_toBottomOf="@id/detalhes_personagens_genero" />
+
+        <TextView
+            android:id="@+id/detalhes_personagens_olhos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/detalhes_personagens_textview_olhos"
+            app:layout_constraintTop_toTopOf="@id/detalhes_personagens_textview_olhos"
+            tools:text="verdes" />
+
+        <TextView
+            android:id="@+id/detalhes_personagens_textview_cabelo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Cor do Cabelo:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/detalhes_personagens_nome"
+            app:layout_constraintTop_toBottomOf="@id/detalhes_personagens_olhos" />
+
+        <TextView
+            android:id="@+id/detalhes_personagens_cabelo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/detalhes_personagens_textview_cabelo"
+            app:layout_constraintTop_toTopOf="@id/detalhes_personagens_textview_cabelo"
+            tools:text="verdes" />
+
+        <TextView
+            android:id="@+id/detalhes_personagens_textview_iamagem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="Foto:"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/detalhes_personagens_nome"
+            app:layout_constraintTop_toBottomOf="@id/detalhes_personagens_cabelo" />
+
+        <ImageView
+            android:id="@+id/detalhes_personagens_imagem"
+            android:layout_width="320dp"
+            android:layout_height="400dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detalhes_personagens_textview_iamagem"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:scaleType="centerCrop"
+            tools:src="@color/black" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
